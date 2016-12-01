@@ -201,17 +201,10 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
     new MaterialDialog.Builder(mContext).title(R.string.no_network_title).content(R.string.no_network_content).show();
   }
 
-  public void restoreActionBar() {
-    ActionBar actionBar = getSupportActionBar();
-    actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-    actionBar.setDisplayShowTitleEnabled(true);
-    actionBar.setTitle(mTitle);
-  }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
       getMenuInflater().inflate(R.menu.my_stocks, menu);
-      restoreActionBar();
       return true;
   }
 
