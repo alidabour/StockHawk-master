@@ -31,4 +31,6 @@
     <string name="six_months">Six Months</string>
     <string name="year">Year</string>
     <string name="stock_hawk">Stock Hawk</string>
+    <string name="stock_is_saved">"This stock is already saved!"</string>
+    <string name="stock_not_found">"Symbol Not Found"</string>
 </resources>

@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingStart="@dimen/activity_horizontal_margin"
     app:paddingEnd="@dimen/activity_horizontal_margin"
-    tools:context="com.sam_chordas.android.stockhawk.ui.DetailActivity"
+    tools:context="com.ali.android.stockhawk.ui.DetailActivity"
     android:orientation="vertical">
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"

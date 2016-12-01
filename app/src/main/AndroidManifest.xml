@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sam_chordas.android.stockhawk">
+    package="com.ali.android.stockhawk">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme"
         android:supportsRtl="true">
         <activity
-            android:name=".ui.MyStocksActivity"
+            android:name="com.ali.android.stockhawk.ui.MyStocksActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,24 +27,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.DetailActivity"
+            android:name="com.ali.android.stockhawk.ui.DetailActivity"
             android:label="@string/app_name">
         </activity>
 
-        <service android:name=".service.StockTaskService"
+        <service android:name="com.ali.android.stockhawk.service.StockTaskService"
             android:exported="true"
             android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
             </intent-filter>
         </service>
-        <service android:name=".service.StockIntentService" />
-        <service android:name=".service.HistoryIntentService" />
+        <service android:name="com.ali.android.stockhawk.service.StockIntentService" />
+        <service android:name="com.ali.android.stockhawk.service.HistoryIntentService" />
         <provider android:name=".data.generated.QuoteProvider"
-            android:authorities="com.sam_chordas.android.stockhawk.data.QuoteProvider"
+            android:authorities="com.ali.android.stockhawk.data.QuoteProvider"
             android:exported="false"
             android:grantUriPermissions="true" />
-        <receiver android:name=".widget.CollectionWidget"
+        <receiver android:name="com.ali.android.stockhawk.widget.CollectionWidget"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -55,7 +55,7 @@
                 android:resource="@xml/collection_widget_info" />
         </receiver>
         <!--<service android:name=".widget.WidgetService"-->
-        <service android:name=".widget.WidgetDataProvider"
+        <service android:name="com.ali.android.stockhawk.widget.WidgetDataProvider"
             android:enabled="true"
             android:permission="android.permission.BIND_REMOTEVIEWS"
             android:exported="false"/>
